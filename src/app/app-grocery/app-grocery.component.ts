@@ -1,22 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-app-grocery',
+  selector: 'app-grocery',
   templateUrl: './app-grocery.component.html',
-  styleUrls:
-  [
-  '../../assets/css/bootstrap.min.css'
-  ]
+  styleUrls: ['../../assets/css/bootstrap.min.css'],
 })
-export class GroceryComponent {
+export class GroceryComponent implements OnInit {
   task: string;
   tasks = [];
 
-  onClick(){
-    this.tasks.push({name: this.task});
+  onClick() {
+    this.tasks.push({ name: this.task });
     this.task = '';
   }
 
-  }
+  constructor() {}
 
-
+  ngOnInit(): void {}
+}
